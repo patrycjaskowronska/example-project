@@ -35,3 +35,14 @@ studenci = ["Ania", "Kasia", "Piotr", "Tomek"]
 # Hello Tomek
 for x in studenci:
     print("Hello "+x)
+
+# zadanie 1.5
+
+liczba = 3
+potega = 4
+
+wynik = pow(liczba, potega)
+
+# oczekiwany rezultat:
+# Wynik wynosi: 81
+print("Wynik wynosi: "+str(wynik))
