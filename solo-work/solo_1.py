@@ -97,3 +97,55 @@ lista = [x for x in studenci if x.split()[-1].startswith('N')]
 
 liczba_n = len(lista)
 print("Liczba studentow na N wynosi: "+str(liczba_n))
+
+# zadanie 1.10
+
+# zmienne poniezej preprezentuja ulozenie punktow na wykresie,
+# do zadania dolaczono takze rysunek pomocniczy
+wykres_1 = [[2, 4], [4, 4], [6, 4]]
+wykres_2 = [[2, 3], [4, 4], [6, 5]]
+wykres_3 = [[2, 3], [4, 3], [5, 4]]
+
+# zbadaj kazdy wykres, czy dla wyznaczonych punktow istnieje funkcja
+# liniowa laczaca punkty
+# jesli sie nie da, to zwroc False
+# jesli sie da, zwroc True
+import numpy as np
+
+wynik1 = np.array(wykres_1[1]) - np.array(wykres_1[0])
+wynik2 = np.array(wykres_1[2]-np.array(wykres_1[1]))
+
+if wynik1[0] == wynik2[0] and wynik1[1] == wynik2[1]:
+  wykres_1_funkcja_liniowa = True
+
+wynik1 = np.array(wykres_2[1]) - np.array(wykres_2[0])
+wynik2 = np.array(wykres_2[2]-np.array(wykres_2[1]))
+
+if wynik1[0] == wynik2[0] and wynik1[1] == wynik2[1]:
+  wykres_2_funkcja_liniowa = True
+
+wynik1 = np.array(wykres_3[1]) - np.array(wykres_3[0])
+wynik2 = np.array(wykres_3[2]-np.array(wykres_3[1]))
+
+if wynik1[0] == wynik2[0] and wynik1[1] == wynik2[1]:
+  wykres_3_funkcja_liniowa = True
+
+if wykres_1_funkcja_liniowa:
+    print("Dla punktow w wykres_1 mozna wyznaczyc funkcje liniowa.")
+else:
+    print("Dla punktow w wykres_1 nie mozna wyznaczyc funkcji liniowej.")
+
+if wykres_2_funkcja_liniowa:
+    print("Dla punktow w wykres_2 mozna wyznaczyc funkcje liniowa.")
+else:
+    print("Dla punktow w wykres_2 nie mozna wyznaczyc funkcji liniowej.")
+
+if wykres_3_funkcja_liniowa:
+    print("Dla punktow w wykres_3 mozna wyznaczyc funkcje liniowa.")
+else:
+    print("Dla punktow w wykres_3 nie mozna wyznaczyc funkcji liniowej.")
+
+# oczekiwany rezultat:
+# Dla punktow w wykres_1 mozna wyznaczyc funkcje liniowa.
+# Dla punktow w wykres_2 mozna wyznaczyc funkcje liniowa.
+# Dla punktow w wykres_3 nie mozna wyznaczyc funkcji liniowej.
