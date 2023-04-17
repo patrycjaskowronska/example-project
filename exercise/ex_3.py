@@ -31,13 +31,15 @@ def romb(bok, wysokosc):
 
 # trapez i kolo dla studenta 3
 def trapez(bok_a, bok_b, bok_c, bok_d, wysokosc_a):
-    # TODO
-    return 0, 0
+    obwod = bok_a + bok_b + bok_c + bok_d
+    pole = ((bok_a + bok_b) * wysokosc_a) / 2
+    return obwod, pole
 
 
 def kolo(promien):
-    # TODO
-    return 0, 0
+    obwod = 2 * math.pi * promien
+    pole = math.pi * pow(promien, 2)
+    return obwod, pole
 
 
 # assert trojkat(10, 15, 16, 8) == (41, 40)
@@ -45,6 +47,6 @@ def kolo(promien):
 # assert prostokat(12, 10) == (44, 120)
 # assert rownoleglobok(6, 5, 2) == (22, 12)
 # assert romb(10, 5) == (40, 50)
-# assert trapez(10, 15, 7, 14, 2) == (45, 25)
+assert trapez(10, 15, 7, 14, 2) == (46, 25)
 # TODO na koniec (na wyraźne polecenie prowadzącego)! 
 # Dla każdej figury powinny znajdować się dwa testy
