@@ -39,4 +39,17 @@ def max_list(list):
 list_2 = [22, 17, 34, 51, 13]
 print(max(list_2))
 
-# fibonacci
+# funkcja fibonacci
+# jeżeli n = 0 zwróć: 0
+# albo jeżeli n = 1 zwróć: 1
+# w pozostałych przypadkach zwróć: fibonacci(n-1) + fibonacci(n-2)
+
+def fibonacci(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibonacci(n-1) + fibonacci(n-2)
+    
+print(fibonacci(6))
