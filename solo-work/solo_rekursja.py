@@ -1,6 +1,6 @@
-# funkcja sumująca elementy list
-# is list empty -> 0
-# is list not empty -> list[0] + sum[reszta]
+# suma wszystkich elementów listy
+# jeżeli lista jest pusta zwróć: 0
+# w przeciwnym przypadku zwróć: pierwszy element listy + suma reszty elementów
 
 def sum(list):
     if not list:
@@ -11,14 +11,32 @@ def sum(list):
 list_1 = [3,2,7]
 print(sum(list_1))
 
-# silnia
-# is liczba 0 -> 1
-# is liczba not 0 -> liczba * silnia(liczba-1)
+# funkcja silnia
+# jeżeli liczba = 0 zwróć: 1
+# w przeciwnym przypadku zwróć: liczba * silnia(liczba-1)
 
-def silnia(liczba):
-    if liczba == 0:
+def factorial(number):
+    if number == 0:
         return 1
     else:
-        return liczba * silnia(liczba-1)
+        return number * factorial(number-1)
     
-print(silnia(5))
+print(factorial(5))
+
+# wartość maksymalna w liście
+# funkcja max_list
+# n = długość listy
+# jeżeli n = 1 zwróć: pierwszy element listy
+# w przeciwnym przypadku zwróć: max(ostatni element listy, max_list(pozostałe elementy listy)) 
+ 
+def max_list(list):
+    n = len(list)
+    if n == 1:
+        return list[0]
+    else:
+        return max(list[n-1], max_list(list[:(n-2)]))
+            
+list_2 = [22, 17, 34, 51, 13]
+print(max(list_2))
+
+# fibonacci
